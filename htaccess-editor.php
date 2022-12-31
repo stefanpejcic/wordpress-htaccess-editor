@@ -27,7 +27,7 @@ function htaccess_editor_page() {
             add_settings_error('htaccess-editor', 'htaccess-editor', 'There was an error updating the .htaccess file.', 'error');
         }
     } elseif (isset($_POST['default'])) {
-        $default_url = 'https://gist.githubusercontent.com/BFTrick/3706672/raw/be744502cf3921f761cbef11878af6f4a2024c3d/.htaccess';
+        $default_url = 'https://raw.githubusercontent.com/stefanpejcic/wordpress-htaccess-editor/main/.htaccess';
         $default_content = file_get_contents($default_url);
         if ($default_content) {
             $result = file_put_contents($htaccess_path, $default_content);
